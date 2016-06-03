@@ -1,6 +1,6 @@
 angular.module("newsSummaryApp")
-  .controller("NewsSummaryController", [function() {
+  .controller("NewsSummaryController", ["NewsItemFactory", function(NewsItemFactory) {
     var self = this;
 
-    self.greeting = "Hello, world";
+    self.newsItems = [new NewsItemFactory('awesome newz story')];
   }]);

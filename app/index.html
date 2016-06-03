@@ -6,12 +6,17 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
+    <script src="js/factories.js"></script>
     <title>News Summary</title>
   </head>
 
   <body>
     <div ng-controller="NewsSummaryController as controller">
-      <p>{{controller.greeting}}</p>
+      <ul>
+        <li ng-repeat="newsitem in controller.newsItems">
+          <p class='headline'>{{newsitem.headline}}</p>
+        </li>
+      </ul>
     </div>
   </body>
 </html>

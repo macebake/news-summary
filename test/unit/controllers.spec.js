@@ -1,13 +1,16 @@
 describe("NewsSummaryController", function() {
-  var controller;
+
+  var controller, newsitem;
 
   beforeEach(module("newsSummaryApp"));
 
-  beforeEach(inject(function($controller) {
+  beforeEach(inject(function($controller, _NewsItemFactory_) {
     controller = $controller("NewsSummaryController");
+    NewsItemFactory = _NewsItemFactory_;
   }));
 
-  it("makes exposes a greeting of 'Hello, world'", function() {
-    expect(controller.greeting).toEqual("Hello, world");
+  it('is initialized with news items', function(){
+    expect(controller.newsItems[0].headline).toEqual('awesome newz story');
   });
+
 });
