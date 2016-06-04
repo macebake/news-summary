@@ -7,6 +7,8 @@
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
     <script src="js/factories.js"></script>
+    <script src="js/services.js"></script>
+
     <title>News Summary</title>
   </head>
 
@@ -14,7 +16,7 @@
     <div ng-controller="NewsSummaryController as controller">
       <ul>
         <li ng-repeat="newsitem in controller.newsItems">
-          <p class='headline'>{{newsitem.headline}}</p>
+          <a href="{{newsitem.webUrl}}">{{newsitem.headline}}</a>
         </li>
       </ul>
     </div>
